@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  max-width: 72rem;
+  margin: 0 auto;
+  color: white;
+}
+
+.container-page {
+  border: solid 1px #959595;
+  background-color: #323232;
+  padding: 1rem;
+}
+
+.storage-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.form-footer {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 1.5rem;
+  padding: 1.5rem 0;
+  justify-content: right;
+}
+

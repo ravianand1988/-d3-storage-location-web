@@ -6,6 +6,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 const MATERIAL_COMPONENTS = [
   MatButtonModule,
@@ -14,11 +16,17 @@ const MATERIAL_COMPONENTS = [
   MatFormFieldModule,
   MatInputModule,
   MatIconModule,
+  MatSelectModule,
 ];
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, ...MATERIAL_COMPONENTS],
-  exports: [...MATERIAL_COMPONENTS],
+  imports: [
+    CommonModule,
+    ...MATERIAL_COMPONENTS,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  exports: [...MATERIAL_COMPONENTS, FormsModule, ReactiveFormsModule],
 })
 export class SharedModule {}

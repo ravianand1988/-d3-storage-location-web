@@ -1,1 +1,102 @@
-<p>storage-create-edit works!</p>
+<div class="container-page">
+  <h2 class="mat-title">Add new storage</h2>
+  <form class="storage-form" [formGroup]="form">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Storage Name</mat-label>
+      <input matInput formControlName="name" placeholder="Foo" />
+      <mat-hint>A name for the storage!</mat-hint>
+      <mat-error
+        *ngIf="form.get('name')?.touched && form.get('name')?.errors?.required"
+      >
+        * <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Type</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let type of storageTypeOptions" [value]="type.value">
+          {{ type.label }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field
+      type="number"
+      min="0"
+      max="99"
+      class="example-full-width"
+      appearance="outline"
+    >
+      <mat-label>Grid Location</mat-label>
+      <input
+        matInput
+        formControlName="gridLocation"
+        placeholder="Grid location"
+      />
+      <mat-hint>Can be between 0 to 99!</mat-hint>
+      <mat-error
+        *ngIf="
+          form.get('gridLocation')?.touched &&
+          form.get('gridLocation')?.errors?.required
+        "
+      >
+        * <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field
+      type="number"
+      min="0"
+      max="99"
+      class="example-full-width"
+      appearance="outline"
+    >
+      <mat-label>Row</mat-label>
+      <input
+        matInput
+        formControlName="row"
+        placeholder="Row"
+      />
+      <mat-hint>Can be between 0 to 99!</mat-hint>
+      <mat-error
+        *ngIf="
+          form.get('row')?.touched &&
+          form.get('row')?.errors?.required
+        "
+      >
+        * <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field
+      type="number"
+      min="0"
+      max="99"
+      class="example-full-width"
+      appearance="outline"
+    >
+      <mat-label>Column</mat-label>
+      <input
+        matInput
+        formControlName="column"
+        placeholder="Column"
+      />
+      <mat-hint>Can be between 0 to 99!</mat-hint>
+      <mat-error
+        *ngIf="
+          form.get('column')?.touched &&
+          form.get('column')?.errors?.required
+        "
+      >
+        * <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </form>
+
+  <div class="form-footer">
+    <button mat-raised-button color="accent" (click)="cancel()">Cancel</button>
+    <button mat-raised-button color="primary">Save</button>
+  </div>
+
+</div>
