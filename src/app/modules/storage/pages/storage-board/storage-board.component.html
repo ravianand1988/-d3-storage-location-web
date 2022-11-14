@@ -1,0 +1,45 @@
+<div class="container-board">
+  <div class="storage-overview">
+    <mat-card>
+      <mat-card-title>Storage board overview</mat-card-title>
+    </mat-card>
+  </div>
+
+  <div>
+    <mat-card>
+      <mat-card-title>Quick Actions</mat-card-title>
+      <mat-card-actions>
+        <button
+          mat-fab
+          color="primary"
+          aria-label="Example icon button with a delete icon"
+          (click)="navigate('create-edit')"
+        >
+          <mat-icon>add</mat-icon>
+        </button>
+        <button
+          mat-fab
+          color="accent"
+          aria-label="Example icon button with a delete icon"
+          (click)="navigate('d3-map')"
+        >
+          <mat-icon>assessment</mat-icon>
+        </button>
+        <button
+          mat-fab
+          color="warn"
+          aria-label="Example icon button with a delete icon"
+          (click)="navigate('list')"
+        >
+          <mat-icon>table_chart</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div>
+    <mat-card>
+      <mat-card-title>What you wish?</mat-card-title>
+    </mat-card>
+  </div>
+</div>
