@@ -1,7 +1,7 @@
 enum StorageType {
-  Store = 0,
-  Pallet = 10,
-  Shelf = 20,
+  Store = 'store',
+  Pallet = 'pallet',
+  Shelf = 'shelf',
 }
 
 class StorageLocation {
@@ -9,7 +9,7 @@ class StorageLocation {
   column!: number;
 }
 
-class Storage {
+class StorageByrd {
   id!: string;
   name!: string;
   type!: StorageType;
@@ -19,4 +19,4 @@ class Storage {
   col!: number;
 }
 
-export { Storage, StorageLocation, StorageType };
+export { StorageByrd, StorageLocation, StorageType };

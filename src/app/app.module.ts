@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,9 +15,8 @@ import { environment } from 'src/environments/environment';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    provideFirebaseApp(() =>
-      initializeApp(environment.firebase, 'storage-hack-rk')
-    ),
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase, 'storage-rk')),
     provideFirestore(() => getFirestore()),
   ],
   providers: [],

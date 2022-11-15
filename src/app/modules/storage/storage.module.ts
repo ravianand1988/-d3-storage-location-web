@@ -8,6 +8,7 @@ import {
 } from './pages';
 import { StorageRoutingModule } from './storage-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,6 @@ import { SharedModule } from '../shared/shared.module';
     StorageListComponent,
     StorageD3MapComponent,
   ],
-  imports: [CommonModule, SharedModule, StorageRoutingModule],
+  imports: [CommonModule, SharedModule, StorageRoutingModule, AgGridModule],
 })
 export class StorageModule {}
